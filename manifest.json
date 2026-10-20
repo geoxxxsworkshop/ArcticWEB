@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "ArcticWEB OS Plugin",
+  "version": "1.0",
+  "description": "ArcticWEB OS:n tekoäly- ja automaatiolaajennus Helium-selaimeen",
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "scripting",
+    "storage"
+  ],
+  "action": {
+    "default_title": "Avaa ArcticWEB OS"
+  },
+  "chrome_url_overrides": {
+    "newtab": "index.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["plugin.js"]
+    }
+  ]
+}
